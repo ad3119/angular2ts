@@ -1,4 +1,4 @@
-System.register(['angular2/core', './asset.service'], function(exports_1) {
+System.register(['angular2/core', './asset.service', './../pipes/percentage.pipe'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,7 +8,7 @@ System.register(['angular2/core', './asset.service'], function(exports_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, asset_service_1;
+    var core_1, asset_service_1, percentage_pipe_1;
     var AssetComponent;
     return {
         setters:[
@@ -17,6 +17,9 @@ System.register(['angular2/core', './asset.service'], function(exports_1) {
             },
             function (asset_service_1_1) {
                 asset_service_1 = asset_service_1_1;
+            },
+            function (percentage_pipe_1_1) {
+                percentage_pipe_1 = percentage_pipe_1_1;
             }],
         execute: function() {
             AssetComponent = (function () {
@@ -42,6 +45,7 @@ System.register(['angular2/core', './asset.service'], function(exports_1) {
                     core_1.Component({
                         selector: 'asset-service',
                         templateUrl: 'app/views/asset.component.html',
+                        pipes: [percentage_pipe_1.percentagePipe],
                         styleUrls: ['app/css/panels.css'],
                         providers: [asset_service_1.AssetService]
                     }), 

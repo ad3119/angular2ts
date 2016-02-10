@@ -13,7 +13,7 @@
             <tr *ngFor="#wf of assetServices">
                 <td> {{wf.status}}</td>
                 <td> {{wf.assetnumber}}</td>
-                <td> {{wf.assetpercentage}}</td>
+                <td> {{wf.assetpercentage |percentage }} </td>
             </tr>
         </table>
     </div>

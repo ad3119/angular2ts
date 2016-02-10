@@ -1,10 +1,12 @@
 import {Component, OnInit} from 'angular2/core';
 import {Asset} from './asset';
 import {AssetService} from './asset.service';
+import {percentagePipe} from './../pipes/percentage.pipe';
 
 @Component({
   selector: 'asset-service',
   templateUrl: 'app/views/asset.component.html',
+  pipes:[percentagePipe]
   styleUrls:['app/css/panels.css'],
   providers:[AssetService]
 })
