@@ -19,7 +19,7 @@
                     <li><a [routerLink]="['Dashboard']">Overview</a></li>
                     <li><a [routerLink]="['Asset']">Assets</a></li>
                     <li><a [routerLink]="['Workflow']">Workflow</a></li>
-                    <li><a >Configuration</a></li>
+                    <li><a>Configuration</a></li>
                 </ul>
                 
                 <ul class="nav navbar-nav navbar-right">
@@ -42,10 +42,29 @@
     </nav>
 </header>
 <div class="container-fluid">
-    <ul class="breadcrumb">
-  	    <li>Overview</li>
-  	    <li class="active">System Status</li>
-  	</ul>
+    <div class="row">
+        <div class="col-md-2"> <label class="label-search-beside"> System Status</label></div>
+        <div class="col-md-7 search-form">
+            <div>
+                <form class="form form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="search">
+                    </div>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> Assets & Tasks</button>
+                      <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-menu-down"></span></button>
+                    </div>
+                    <div class="form-group pull-right "><span class="glyphicon glyphicon-remove pull-right"></span></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class=row>
+        <ul class="breadcrumb">
+      	    <li><span class="glyphicon glyphicon-home"></span>Overview</li>
+      	    <li class="active">System Status</li>
+      	</ul>
+    </div>
     <router-outlet></router-outlet>
 </div>
 <footer class="footer">

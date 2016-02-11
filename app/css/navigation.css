@@ -39,3 +39,31 @@ ul.breadcrumb {
 ul.breadcrumb li.active {
 	font-size: 1.2em;
 }
+
+.label-search-beside {
+    font-weight:100;
+    font-size:22px;
+}
+
+.search-form {
+    margin-top: -20px;
+    border: 15px solid grey;
+    background: grey;
+    margin-left: -35px;
+}
+ 
+.search-form input[type="text"]{
+    width: 450px;
+    padding: 15px;
+    margin-left: -15px;
+    border-radius: 0;
+}
+
+.search-form .btn-group>button {
+    border-radius:0;
+    border-color:#FFF;
+}
+.search-form .glyphicon-remove {
+    margin-top:7px;
+    color:#FFF;
+}
