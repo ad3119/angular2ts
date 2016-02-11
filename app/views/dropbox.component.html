@@ -1,0 +1,19 @@
+<div class="panel panel-primary">
+    <div class="panel-heading ">
+       Dropboxes <a class="pull-right"><span class="glyphicon glyphicon-cog"></span> </a>
+    </div>
+    <div class="panel-body">
+        <table class="table table-condensed table-striped table-bordered table-hover">
+            <tr>
+                <th></th>
+                <th># of dropboxes</th>
+                <th>% of dropboxes</th>
+            </tr>
+            <tr *ngFor="#wf of Dropboxes">
+                <td> {{wf.status}}</td>
+                <td> {{wf.dropboxnumber}}</td>
+                <td> {{wf.dropboxpercentage |percentage }} </td>
+            </tr>
+        </table>
+    </div>
+</div>

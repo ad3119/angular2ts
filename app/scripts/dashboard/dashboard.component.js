@@ -1,4 +1,4 @@
-System.register(['angular2/core', './../workflow/workflow.component', './../distribution/distribution.component', './../asset/asset.component'], function(exports_1) {
+System.register(['angular2/core', './../workflow/workflow.component', './../distribution/distribution.component', './../asset/asset.component', './../dropbox/dropbox.component', './../ttvqueue/ttvqueue.component', './../content-processing/contentprocessingjob.component'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,7 +8,7 @@ System.register(['angular2/core', './../workflow/workflow.component', './../dist
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, workflow_component_1, distribution_component_1, asset_component_1;
+    var core_1, workflow_component_1, distribution_component_1, asset_component_1, dropbox_component_1, ttvqueue_component_1, contentprocessingjob_component_1;
     var DashboardComponent;
     return {
         setters:[
@@ -23,6 +23,15 @@ System.register(['angular2/core', './../workflow/workflow.component', './../dist
             },
             function (asset_component_1_1) {
                 asset_component_1 = asset_component_1_1;
+            },
+            function (dropbox_component_1_1) {
+                dropbox_component_1 = dropbox_component_1_1;
+            },
+            function (ttvqueue_component_1_1) {
+                ttvqueue_component_1 = ttvqueue_component_1_1;
+            },
+            function (contentprocessingjob_component_1_1) {
+                contentprocessingjob_component_1 = contentprocessingjob_component_1_1;
             }],
         execute: function() {
             DashboardComponent = (function () {
@@ -33,7 +42,7 @@ System.register(['angular2/core', './../workflow/workflow.component', './../dist
                     core_1.Component({
                         selector: 'dashboard',
                         templateUrl: 'app/views/dashboard.component.html',
-                        directives: [workflow_component_1.WorkflowComponent, distribution_component_1.DistributionComponent, asset_component_1.AssetComponent]
+                        directives: [workflow_component_1.WorkflowComponent, distribution_component_1.DistributionComponent, asset_component_1.AssetComponent, dropbox_component_1.DropboxComponent, ttvqueue_component_1.TTVQueueComponent, contentprocessingjob_component_1.ContentProcessingJobComponent]
                     }), 
                     __metadata('design:paramtypes', [])
                 ], DashboardComponent);
