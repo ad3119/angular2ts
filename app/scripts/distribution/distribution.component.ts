@@ -13,7 +13,10 @@ export class DistributionComponent {
   public distrubtionTasksLength = 0;
   public distributionServices: Distribution[];
   constructor(private _distributionService: DistributionService ) { };
-  
+  public visible = true;
+  toggle() {
+    this.visible = !this.visible;
+  }
   getDistributionTasks() {
    this._distributionService.getDistributionTasks().
    then(tasks => this.distributionServices = tasks).then(tasks => this.distrubtionTasksLength = tasks.length;)

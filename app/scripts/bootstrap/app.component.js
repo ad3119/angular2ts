@@ -37,8 +37,13 @@ System.register(['angular2/core', 'angular2/router', 'angular2/http', './../dash
             AppComponent = (function () {
                 function AppComponent(location) {
                     this.title = 'Tour of Heroes';
+                    this.searchVisible = false;
                     location.go(location.path());
                 }
+                AppComponent.prototype.toggle = function () {
+                    console.log('Hi , I am in');
+                    this.searchVisible = !this.searchVisible;
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'app',

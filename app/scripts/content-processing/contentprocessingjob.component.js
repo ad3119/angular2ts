@@ -22,8 +22,12 @@ System.register(['angular2/core', './contentprocessingjob.service'], function(ex
             ContentProcessingJobComponent = (function () {
                 function ContentProcessingJobComponent(_contentProcessingJobService) {
                     this._contentProcessingJobService = _contentProcessingJobService;
+                    this.visible = true;
                     this.contentProcessingJobsLength = 0;
                 }
+                ContentProcessingJobComponent.prototype.toggle = function () {
+                    this.visible = !this.visible;
+                };
                 ;
                 ContentProcessingJobComponent.prototype.getContentProcessingJobs = function () {
                     var _this = this;

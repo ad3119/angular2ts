@@ -24,7 +24,15 @@ import {DistributionComponent} from './../distribution/distribution.component';
 
 export class AppComponent {
   public title = 'Tour of Heroes';
+  public searchVisible = false;
   constructor(location: Location) {
     location.go(location.path());
+  }
+  
+  
+  
+  public toggle() {
+    console.log('Hi , I am in');
+    this.searchVisible = !this.searchVisible;
   }
 }

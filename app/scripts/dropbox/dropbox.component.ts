@@ -15,6 +15,10 @@ export class DropboxComponent {
   
   public Dropboxes: Dropbox[];
   constructor(private _dropboxService: DropboxService ) { };
+  public visible = true;
+  toggle() {
+    this.visible = !this.visible;
+  }
   
   getDropboxService() {
    this._dropboxService.getdropboxServices().then(tasks => this.Dropboxes = tasks)

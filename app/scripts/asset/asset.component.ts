@@ -15,7 +15,10 @@ export class AssetComponent {
   public assetServiceLength = 0;
   public assetServices: Asset[];
   constructor(private _assetServices: AssetService ) { };
-  
+  public visible = true;
+  toggle() {
+    this.visible = !this.visible;
+  }
   getAssetService() {
    this._assetServices.getAssetServices().
    then(tasks => this.assetServices = tasks).then(tasks => this.assetServiceLength = tasks.length;)

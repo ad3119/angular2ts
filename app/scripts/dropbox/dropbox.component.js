@@ -25,8 +25,12 @@ System.register(['angular2/core', './dropbox.service', './../pipes/percentage.pi
             DropboxComponent = (function () {
                 function DropboxComponent(_dropboxService) {
                     this._dropboxService = _dropboxService;
+                    this.visible = true;
                 }
                 ;
+                DropboxComponent.prototype.toggle = function () {
+                    this.visible = !this.visible;
+                };
                 DropboxComponent.prototype.getDropboxService = function () {
                     var _this = this;
                     this._dropboxService.getdropboxServices().then(function (tasks) { return _this.Dropboxes = tasks; });

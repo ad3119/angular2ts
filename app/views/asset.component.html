@@ -1,8 +1,10 @@
 <div class="panel panel-primary">
     <div class="panel-heading ">
-        Assets ({{assetServiceLength}})<a class="pull-right"><span class="glyphicon glyphicon-cog"></span> </a>
+        Assets ({{assetServiceLength}})
+        <a class="pull-right"><span class="glyphicon glyphicon-cog"></span> </a>
+        <a (click)="toggle()" class="pull-right"><span class="{{ visible ? 'glyphicon glyphicon-minus' : 'glyphicon glyphicon-plus' }}"></span> </a>
     </div>
-    <div class="panel-body">
+    <div class="panel-body" [hidden]="!visible">
         <label class="label-highlight">1 Invalid Meta Data File <span class="glyphicon glyphicon-triangle-right"></span></label>
         <table class="table table-condensed table-striped table-bordered table-hover">
             <tr>

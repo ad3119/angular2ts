@@ -7,5 +7,8 @@ import {Component} from 'angular2/core';
   styleUrls:['app/css/panels.css'],
 })
 export class TTVQueueComponent {
-  
+  public visible = true;
+  toggle() {
+    this.visible = !this.visible;
+  }
 }

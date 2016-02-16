@@ -9,7 +9,10 @@ import {ContentProcessingJobService} from './contentprocessingjob.service';
   providers:[ContentProcessingJobService]
 })
 export class ContentProcessingJobComponent {
-
+  public visible = true;
+  toggle() {
+    this.visible = !this.visible;
+  }
   public contentProcessingJobsLength = 0;
   public contentProcessingJobs: ContentProcessingJob[];
   constructor(private _contentProcessingJobService: ContentProcessingJobService ) { };

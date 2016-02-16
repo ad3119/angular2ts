@@ -18,7 +18,11 @@ System.register(['angular2/core'], function(exports_1) {
         execute: function() {
             TTVQueueComponent = (function () {
                 function TTVQueueComponent() {
+                    this.visible = true;
                 }
+                TTVQueueComponent.prototype.toggle = function () {
+                    this.visible = !this.visible;
+                };
                 TTVQueueComponent = __decorate([
                     core_1.Component({
                         selector: 'ttvqueue',

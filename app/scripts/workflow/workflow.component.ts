@@ -9,9 +9,13 @@ import {WorkFlowTasksService} from './workflow.service';
   providers:[WorkFlowTasksService]
 })
 export class WorkflowComponent {
-
+    
   public wftasksLength = 0;
   public workflowservices: Workflow[];
+  public visible = true;
+  
+  public theads = ['Tasks','Warning', 'In Progress', 'Falied'] 
+  
   constructor(private _workflowService: WorkFlowTasksService ) { };
   
   getWorkflowTasks() {
@@ -22,9 +26,11 @@ export class WorkflowComponent {
                      .subscribe(
                        wfservicestasks => this.workflowservices = wfservicestasks,
                        error =>  this.errorMessage = <any>error);
-*/  };
+*/};
   ngOnInit() {
     this.getWorkflowTasks();
+  };
+  toggle() {
+    this.visible = !this.visible;
   }
-  
 }

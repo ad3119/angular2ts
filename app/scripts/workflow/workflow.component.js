@@ -23,6 +23,8 @@ System.register(['angular2/core', './workflow.service'], function(exports_1) {
                 function WorkflowComponent(_workflowService) {
                     this._workflowService = _workflowService;
                     this.wftasksLength = 0;
+                    this.visible = true;
+                    this.theads = ['Tasks', 'Warning', 'In Progress', 'Falied'];
                 }
                 ;
                 WorkflowComponent.prototype.getWorkflowTasks = function () {
@@ -37,6 +39,10 @@ System.register(['angular2/core', './workflow.service'], function(exports_1) {
                 ;
                 WorkflowComponent.prototype.ngOnInit = function () {
                     this.getWorkflowTasks();
+                };
+                ;
+                WorkflowComponent.prototype.toggle = function () {
+                    this.visible = !this.visible;
                 };
                 WorkflowComponent = __decorate([
                     core_1.Component({

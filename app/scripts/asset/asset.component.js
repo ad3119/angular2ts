@@ -26,8 +26,12 @@ System.register(['angular2/core', './asset.service', './../pipes/percentage.pipe
                 function AssetComponent(_assetServices) {
                     this._assetServices = _assetServices;
                     this.assetServiceLength = 0;
+                    this.visible = true;
                 }
                 ;
+                AssetComponent.prototype.toggle = function () {
+                    this.visible = !this.visible;
+                };
                 AssetComponent.prototype.getAssetService = function () {
                     var _this = this;
                     this._assetServices.getAssetServices().

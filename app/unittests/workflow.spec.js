@@ -1,4 +1,4 @@
-System.register(['./../scripts/workflow/workflow.js'], function(exports_1) {
+System.register(['./scripts/workflow/workflow'], function(exports_1) {
     var workflow_1;
     return {
         setters:[

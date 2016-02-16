@@ -23,8 +23,12 @@ System.register(['angular2/core', './distribution.service'], function(exports_1)
                 function DistributionComponent(_distributionService) {
                     this._distributionService = _distributionService;
                     this.distrubtionTasksLength = 0;
+                    this.visible = true;
                 }
                 ;
+                DistributionComponent.prototype.toggle = function () {
+                    this.visible = !this.visible;
+                };
                 DistributionComponent.prototype.getDistributionTasks = function () {
                     var _this = this;
                     this._distributionService.getDistributionTasks().
