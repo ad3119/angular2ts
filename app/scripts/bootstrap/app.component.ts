@@ -6,6 +6,8 @@ import {WorkflowComponent} from './../workflow/workflow.component';
 import {AssetComponent} from './../asset/asset.component';
 import {DistributionComponent} from './../distribution/distribution.component';
 
+declare var jQuery:JQueryStatic;
+
 @Component({
   selector: 'app',
   templateUrl: 'app/views/app.component.html',

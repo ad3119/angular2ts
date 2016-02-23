@@ -1,4 +1,5 @@
-<div class="panel panel-primary">
+<div class="row">
+    <div class="panel panel-primary">
     <div class="panel-heading ">
         Assets ({{assetServiceLength}})
         <a class="pull-right"><span class="glyphicon glyphicon-cog"></span> </a>
@@ -19,4 +20,25 @@
             </tr>
         </table>
     </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4 col-md-4">
+        <div class="spinner" style="padding:10px;">
+          <div class="input-group" style="width:150px;">
+            <input type="text" class="spinner-input form-control" value="0" maxlength="3" readonly="">
+            <div class="spinner-buttons input-group-btn">
+              <button type="button" class="btn spinner-up default">
+                <i class="fa fa-chevron-up"></i>
+              </button>
+              <button type="button" class="btn spinner-down default">
+                <i class="fa fa-chevron-down"></i>
+              </button>
+            </div>
+          </div>
+          <span class="help-block">max value: 9999</span>
+        </div>
+      </div>
+      <!-- /.col-sm-4-->
+    </div>
+    
 </div>
