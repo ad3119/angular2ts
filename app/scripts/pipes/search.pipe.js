@@ -1,4 +1,4 @@
-System.register(['angular2/core'], function(exports_1, context_1) {
+System.register(["angular2/core"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -11,32 +11,41 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var TTVQueueComponent;
+    var SearchPipe;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            TTVQueueComponent = (function () {
-                function TTVQueueComponent() {
-                    this.visible = true;
+            SearchPipe = (function () {
+                function SearchPipe() {
                 }
-                TTVQueueComponent.prototype.toggle = function () {
-                    this.visible = !this.visible;
+                SearchPipe.prototype.transform = function (value, args) {
+                    if (!args[0]) {
+                        return value;
+                    }
+                    else if (value) {
+                        return value.filter(function (item) {
+                            for (var key in item) {
+                                if ((typeof item[key] === 'string' || item[key] instanceof String) &&
+                                    (item[key].indexOf(args[0]) !== -1)) {
+                                    return true;
+                                }
+                            }
+                        });
+                    }
                 };
-                TTVQueueComponent = __decorate([
-                    core_1.Component({
-                        selector: 'ttvqueue',
-                        templateUrl: 'app/views/ttvqueue.component.html',
-                        styleUrls: ['app/css/panels.css'],
+                SearchPipe = __decorate([
+                    core_1.Pipe({
+                        name: "search"
                     }), 
                     __metadata('design:paramtypes', [])
-                ], TTVQueueComponent);
-                return TTVQueueComponent;
+                ], SearchPipe);
+                return SearchPipe;
             }());
-            exports_1("TTVQueueComponent", TTVQueueComponent);
+            exports_1("SearchPipe", SearchPipe);
         }
     }
 });
-//# sourceMappingURL=ttvqueue.component.js.map
+//# sourceMappingURL=search.pipe.js.map

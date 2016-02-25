@@ -1,4 +1,6 @@
-System.register(['./scripts/workflow/workflow'], function(exports_1) {
+System.register(['./scripts/workflow/workflow'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var workflow_1;
     return {
         setters:[

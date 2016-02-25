@@ -1,3 +1,11 @@
+ <div class="row removeMargin">
+     <form role="form" class="form-inline">
+            <div class="form-group pull-right">
+                <label for="search">Search :</label>
+                <input type="text" [(ngModel)]="search_text" class="form-control" id="search" placeholder="Start Typing...">
+            </div>
+</form>
+</div>
 <div class="panel panel-primary">
     <div class="panel-heading ">
         Assets ({{assetServiceLength}})
@@ -5,17 +13,26 @@
         <a (click)="toggle()" class="pull-right"><span class="{{ visible ? 'glyphicon glyphicon-minus' : 'glyphicon glyphicon-plus' }}"></span> </a>
     </div>
     <div class="panel-body" [hidden]="!visible">
+       
+
+
         <label class="label-highlight">1 Invalid Meta Data File <span class="glyphicon glyphicon-triangle-right"></span></label>
         <table class="table table-condensed table-striped table-bordered table-hover">
             <tr>
-                <th>Status</th>
-                <th># of assets</th>
-                <th>% of assets</th>
+                <th (click)="sort('assetId')">Asset Id</th>
+                <th (click)="sort('assetName')">Asset Name </th>
+                <th (click)="sort('status')">Status</th>
+                <th (click)="sort('providerId')">Provider ID</th>
+                <!-- <th>% of assets</th> -->
+                <th (click)="sort('workflowName')">Workflow Name </th>
             </tr>
-            <tr *ngFor="#wf of assetServices">
-                <td> {{wf.status}}</td>
-                <td> {{wf.assetnumber}}</td>
-                <td> {{wf.assetpercentage |percentage }} </td>
+            <tr *ngFor="#wf of assetServices  | search:search_text">
+                <td> {{wf.assetId}}</td>
+                <td> {{wf.assetName}}</td>
+                <td> {{wf.status | status}}</td>
+                <td> {{wf.providerId}}</td>
+                <td>{{wf.workflowName}}</td>
+                <!-- <td> {{wf.assetpercentage |percentage }} </td> -->
             </tr>
         </table>
     </div>

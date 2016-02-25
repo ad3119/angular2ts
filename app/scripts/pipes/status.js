@@ -1,4 +1,4 @@
-System.register(['angular2/core'], function(exports_1, context_1) {
+System.register(["angular2/core"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -11,32 +11,45 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var TTVQueueComponent;
+    var statusPipe;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            TTVQueueComponent = (function () {
-                function TTVQueueComponent() {
-                    this.visible = true;
+            statusPipe = (function () {
+                function statusPipe() {
                 }
-                TTVQueueComponent.prototype.toggle = function () {
-                    this.visible = !this.visible;
+                statusPipe.prototype.transform = function (value) {
+                    switch (value) {
+                        case "0":
+                            return "Failed";
+                            break;
+                        case "1":
+                            return "In Progress";
+                            break;
+                        case "2":
+                            return "In Progress";
+                            break;
+                        case "4":
+                            return "Completed";
+                            break;
+                        default:
+                            return "In Progress";
+                            break;
+                    }
                 };
-                TTVQueueComponent = __decorate([
-                    core_1.Component({
-                        selector: 'ttvqueue',
-                        templateUrl: 'app/views/ttvqueue.component.html',
-                        styleUrls: ['app/css/panels.css'],
+                statusPipe = __decorate([
+                    core_1.Pipe({
+                        name: "status"
                     }), 
                     __metadata('design:paramtypes', [])
-                ], TTVQueueComponent);
-                return TTVQueueComponent;
+                ], statusPipe);
+                return statusPipe;
             }());
-            exports_1("TTVQueueComponent", TTVQueueComponent);
+            exports_1("statusPipe", statusPipe);
         }
     }
 });
-//# sourceMappingURL=ttvqueue.component.js.map
+//# sourceMappingURL=status.js.map

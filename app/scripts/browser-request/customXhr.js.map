@@ -1,0 +1,1 @@
+{"version":3,"file":"customXhr.js","sourceRoot":"","sources":["customXhr.ts"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;YAMA;gBAA0C,wCAAkB;gBAA5D;oBAA0C,8BAAkB;oBAC3D,YAAO,GAAY,IAAI,cAAO,CAAC;wBAC7B,kBAAkB,EAAE,gBAAgB;qBACnC,CAAC,CAAC;oBACL,oBAAe,GAAY,IAAI,CAAC;gBACjC,CAAC;gBAND;oBAAC,iBAAU,EAAE;;wCAAA;gBAMb,2BAAC;YAAD,CAAC,AALD,CAA0C,yCAAkB,GAK3D;YALD,uDAKC,CAAA"}

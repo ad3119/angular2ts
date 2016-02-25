@@ -10,6 +10,7 @@
 }
 .panel-body {
     padding: 0;
+    overflow:auto;
 }
 .glyphicon {
     color:#FFF;
@@ -20,4 +21,14 @@
     background-color:red;
     padding:3px;
     margin:3px;
+}
+input {
+    border-radius: 0px!important;
+    margin-bottom: 5px;
+}
+.removeMargin{
+    margin-right:0px !important;
+}
+th{
+    cursor: pointer;
 }
