@@ -44,12 +44,26 @@ System.register(['angular2/core', 'angular2/http', './asset.service', './../pipe
                     this._assetServices = _assetServices;
                     this.search_text = "";
                     this.assetServiceLength = 0;
+                    this.sortedColumn = "assetId";
+                    this.sortAsc = false;
+                    /*sortIcon(key) {
+                      console.log(key);
+                      if (this.sortedColumn == key) return true;
+                      return false;
+                    }*/
                     this.visible = true;
                     this.sorter = new Sorter_1.Sorter();
                 }
                 ;
                 AssetComponent.prototype.sort = function (key) {
                     this.sorter.sort(key, this.assetServices);
+                    this.sortedColumn = key;
+                    if (key == this.sortedColumn) {
+                        this.sortAsc = !this.sortAsc;
+                    }
+                    else {
+                        this.sortAsc = false;
+                    }
                 };
                 AssetComponent.prototype.toggle = function () {
                     this.visible = !this.visible;

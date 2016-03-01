@@ -22,13 +22,33 @@ export class AssetComponent {
   public assetServices: Asset[];
   errorMessage: string;
   sorter: Sorter;
+  sortedColumn = "assetId";
+  sortAsc = false;
+
   constructor(private _assetServices: AssetService ) { 
     this.sorter = new Sorter();
+
   };
 
   sort(key){
     this.sorter.sort(key, this.assetServices);
+    this.sortedColumn = key;
+    if (key == this.sortedColumn) { 
+      this.sortAsc = !this.sortAsc;
+    }
+    else {
+    this.sortAsc = false;
+    }
+
   }
+  
+  /*sortIcon(key) {
+    console.log(key);
+    if (this.sortedColumn == key) return true;
+    return false;
+  }*/
+
+
   public visible = true;
   toggle() {
     this.visible = !this.visible;

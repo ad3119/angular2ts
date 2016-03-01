@@ -12,11 +12,11 @@
     padding: 0;
     overflow:auto;
 }
-.glyphicon {
+.glyphicon-triangle-right,  .glyphicon-plus , .glyphicon-minus, .glyphicon-cog  {
     color:#FFF;
     padding-right:5px;
 }
-.label-highlight {
+.label-highlight{
     color:#FFF;
     background-color:red;
     padding:3px;

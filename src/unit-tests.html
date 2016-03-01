@@ -5,7 +5,24 @@
   <script src="../node_modules/jasmine-core/lib/jasmine-core/jasmine.js"></script>
   <script src="../node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
   <script src="../node_modules/jasmine-core/lib/jasmine-core/boot.js"></script>
-  <script src="1st.spec.js"></script>
+  <script type="text/javascript" src="../node_modules/systemjs/dist/system-polyfills.js"></script>
+  <script type="text/javascript" src="../node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <script type="text/javascript" src="../node_modules/systemjs/dist/system.src.js"></script>
+  <script type="text/javascript" src="../node_modules/angular2/bundles/angular2.dev.js"></script>
+  <!--<script src="1st.spec.js"></script>-->
+
+  <script>
+    System.config({
+      packages: {
+        app: {
+          format: 'register',
+          defaultExtension: 'js'
+        }
+      }
+    });
+    System.import('1st.spec.js')
+      .then(null, console.error.bind(console));
+  </script>
 </head>
 <body>
 </body>
